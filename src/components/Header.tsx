@@ -7,7 +7,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons/faCartShopping
 import { faUserCircle } from '@fortawesome/free-regular-svg-icons'
 const Header = () => {
   return (
-    <header className='fixed z-10 flex items-center w-full gap-6 px-6 py-3 bg-gradient-to-b from-realt-blue-250 to-white'>
+    <header className='fixed z-10 flex items-center w-full gap-6 px-6 py-3 bg-gradient-to-b from-realt-blue-250 to-white md:px-10 md:py-5'>
       <div className='block lg:hidden'>
         <Navbar />
       </div>

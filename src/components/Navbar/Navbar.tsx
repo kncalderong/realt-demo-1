@@ -57,14 +57,14 @@ const Navbar = () => {
         }}
       >
         <nav
-          className={`relative  z-[2] w-[90%] h-[95%] mt-[14%] rounded-tr-lg shadow-md transition-transform duration-200 flex flex-col text-white overflow-hidden ${
+          className={`relative  z-[2] w-[90%] max-w-[450px] h-[95%] mt-[14%] rounded-tr-lg shadow-md transition-transform duration-200 flex flex-col text-white overflow-hidden ${
             isNavbarOpen ? 'translate-x-0' : '-translate-x-[101%]'
-          }`}
+          } `}
         >
-          <div className='flex items-center justify-between px-4 py-5 bg-realt-blue-700/90'>
+          <div className='flex items-center justify-between px-4 py-5 bg-realt-blue-700/90 md:py-8 md:px-6'>
             {isUser ? (
-              <div className='flex items-center justify-between gap-3'>
-                <div className='relative flex justify-center items-center rounded-full overflow-hidden w-[50px] h-[50px]'>
+              <div className='flex items-center justify-between gap-3 md:gap-4'>
+                <div className='relative flex justify-center items-center rounded-full overflow-hidden w-[50px] h-[50px] md:w-[65px] md:h-[65px]'>
                   <Image
                     src={'/avatar/image-amyrobson.png'}
                     alt='user-photo'
@@ -74,8 +74,12 @@ const Navbar = () => {
                 </div>
                 <div className='grow'>
                   <div className='w-[88%]'>
-                    <p className='text-lg truncate'>Amy Robson Long Name</p>
-                    <p className='text-sm truncate'>amyrobson@test.com</p>
+                    <p className='text-lg truncate md:text-xl'>
+                      Amy Robson Long Name
+                    </p>
+                    <p className='text-sm truncate md:text-base'>
+                      amyrobson@test.com
+                    </p>
                   </div>
                 </div>
               </div>
@@ -90,10 +94,13 @@ const Navbar = () => {
             )}
 
             <div
-              className='flex items-center justify-center w-[35px] h-[35px] rounded-md bg-realt-blue-600/90'
+              className='flex items-center justify-center w-[35px] h-[35px] rounded-md bg-realt-blue-600/90 md:w-[40px] md:h-[40px]'
               onClick={() => toggleNavbar()}
             >
-              <FontAwesomeIcon icon={faClose} className='w-[25px] h-[25px]' />
+              <FontAwesomeIcon
+                icon={faClose}
+                className='w-[25px] h-[25px] md:w-[30px] md:h-[30px]'
+              />
             </div>
           </div>
           <MobileNavLinks />
