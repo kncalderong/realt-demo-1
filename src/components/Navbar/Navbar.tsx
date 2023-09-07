@@ -2,17 +2,15 @@
 
 import {
   faBarsStaggered,
-  faCaretDown,
   faCircleUser,
-  faDollarSign,
-  faStore,
+  faClose,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useEffect, useState } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { faClose } from '@fortawesome/free-solid-svg-icons/faClose'
+import MobileNavLinks from './MobileNavLinks'
 
 const Navbar = () => {
   const pathname = usePathname()
@@ -98,19 +96,7 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faClose} className='w-[25px] h-[25px]' />
             </div>
           </div>
-          <div className='flex flex-col h-full gap-4 p-4 bg-realt-blue-750/[85]'>
-            <Link href='/' className='flex items-center gap-4 px-4'>
-              <FontAwesomeIcon icon={faStore} />
-              <p>Marketplace</p>
-            </Link>
-            <div className='flex items-center justify-between px-4'>
-              <div className='flex gap-4'>
-                <FontAwesomeIcon icon={faDollarSign} />
-                <p>Token Actions</p>
-              </div>
-              <FontAwesomeIcon icon={faCaretDown} />
-            </div>
-          </div>
+          <MobileNavLinks />
         </nav>
       </aside>
     </>

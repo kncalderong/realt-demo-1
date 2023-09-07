@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import Navbar from './Navbar'
+import Navbar from './Navbar/Navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons/faCartShopping'
 import { faUserCircle } from '@fortawesome/free-regular-svg-icons'
@@ -22,13 +22,7 @@ const Header = () => {
       <Link href='/'>
         <FontAwesomeIcon
           icon={faCartShopping}
-          className='w-[25px] h-[25px] text-realt-dark-blue'
-        />
-      </Link>
-      <Link href='/'>
-        <FontAwesomeIcon
-          icon={faUserCircle}
-          className='w-[25px] h-[25px] text-realt-dark-blue'
+          className='w-[30px] h-[30px] text-realt-dark-blue'
         />
       </Link>
     </header>
