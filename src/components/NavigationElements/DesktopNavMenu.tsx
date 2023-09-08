@@ -2,6 +2,7 @@
 
 import { faAngleDown, faBuildingWheat } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Image from 'next/image'
 import Link from 'next/link'
 import React, { useRef, useState } from 'react'
 
@@ -45,11 +46,18 @@ const DesktopNavMenu = () => {
     <div className='hidden lg:grid w-[calc((100%-164px)/2)] relative  text-[15px] font-semibold'>
       {/* width calc comes from half of the header minus the centered logo */}
 
-      {/* <div className='absolute w-10 h-full -left-10 top-1/2 -translate-y-1/4 bg-realt-blue-600 shadow-header-box'></div> */}
-      <FontAwesomeIcon
+      <div className='absolute w-10 h-full -left-10 top-1/2 translate-y-[-10%] bg-realt-blue-50 shadow-lg grid place-items-center rounded-md'>
+        <Image
+          src='/realt_logo_polygon.svg'
+          alt='Realt-logo-polygon'
+          width={25}
+          height={25}
+        />
+      </div>
+      {/* <FontAwesomeIcon
         icon={faBuildingWheat}
         className='absolute w-10 h-full -left-10 top-[60%] -translate-y-1/4 text-realt-blue-800 '
-      />
+      /> */}
       <div
         className='h-[60px] w-3/4 pl-8 grid grid-cols-5 gap-2 justify-items-center items-center border-b-[1px] border-slate-400 relative'
         onMouseMove={(e) => handleBorderWidth(e)}
