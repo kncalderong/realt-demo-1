@@ -10,9 +10,9 @@ import React, { useEffect, useState } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import MobileNavLinks from './MobileNavLinks'
+import MobileNavLinks from './Navbar/MobileNavLinks'
 
-const Navbar = () => {
+const Sidebar = () => {
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const [isNavbarOpen, setIsNavbarOpen] = useState(false)
@@ -110,4 +110,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Sidebar

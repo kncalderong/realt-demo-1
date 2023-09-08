@@ -30,6 +30,10 @@ const config: Config = {
         'realt-blue-950': '#0a0f19',
         'realt-marine-blue': '#72A8DA',
         'realt-gold': '#F2A91E',
+        'realt-red': '#90162d',
+      },
+      boxShadow: {
+        'header-box': '2px 2px 8px 0px rgba(0,0,0,0.5);',
       },
     },
   },
