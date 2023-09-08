@@ -5,7 +5,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons/faCartShopping
 import Sidebar from './Sidebar'
 
 import { faUser } from '@fortawesome/free-solid-svg-icons'
-import DesktopNavMenu from './Navbar/DesktopNavMenu'
+import DesktopNavMenu from './NavigationElements/DesktopNavMenu'
 
 const Header = () => {
   return (

@@ -10,7 +10,7 @@ import React, { useEffect, useState } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import MobileNavLinks from './Navbar/MobileNavLinks'
+import MobileNavLinks from './NavigationElements/MobileNavLinks'
 
 const Sidebar = () => {
   const pathname = usePathname()
