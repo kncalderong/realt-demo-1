@@ -1,6 +1,6 @@
 'use client'
 
-import { faAngleDown, faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faBuildingWheat } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import React, { useRef, useState } from 'react'
@@ -45,7 +45,11 @@ const DesktopNavMenu = () => {
     <div className='hidden lg:grid w-[calc((100%-164px)/2)] relative  text-[15px] font-semibold'>
       {/* width calc comes from half of the header minus the centered logo */}
 
-      <div className='absolute w-10 h-full -left-10 top-1/2 -translate-y-1/4 bg-realt-blue-600 shadow-header-box'></div>
+      {/* <div className='absolute w-10 h-full -left-10 top-1/2 -translate-y-1/4 bg-realt-blue-600 shadow-header-box'></div> */}
+      <FontAwesomeIcon
+        icon={faBuildingWheat}
+        className='absolute w-10 h-full -left-10 top-[60%] -translate-y-1/4 text-realt-blue-800 '
+      />
       <div
         className='h-[60px] w-3/4 pl-8 grid grid-cols-5 gap-2 justify-items-center items-center border-b-[1px] border-slate-400 relative'
         onMouseMove={(e) => handleBorderWidth(e)}
@@ -67,7 +71,7 @@ const DesktopNavMenu = () => {
           Tokens Actions
           <FontAwesomeIcon
             icon={faAngleDown}
-            className='absolute right-0 top-1/2 -translate-y-1/2 text-realt-blue-700'
+            className='hidden xl:block absolute -right-1 top-1/2 -translate-y-1/2 text-realt-blue-700'
           />
           {activeMenuElement === 'tokens' && (
             <>
@@ -86,7 +90,7 @@ const DesktopNavMenu = () => {
           DeFi
           <FontAwesomeIcon
             icon={faAngleDown}
-            className='absolute right-0 top-1/2 -translate-y-1/2 text-realt-blue-700'
+            className='hidden xl:block absolute -right-1 top-1/2 -translate-y-1/2 text-realt-blue-700'
           />
           {activeMenuElement === 'DeFi' && (
             <>
@@ -105,7 +109,7 @@ const DesktopNavMenu = () => {
           Team
           <FontAwesomeIcon
             icon={faAngleDown}
-            className='absolute right-0 top-1/2 -translate-y-1/2 text-realt-blue-700'
+            className='hidden xl:block absolute -right-1 top-1/2 -translate-y-1/2 text-realt-blue-700'
           />
           {activeMenuElement === 'team' && (
             <>
@@ -124,7 +128,7 @@ const DesktopNavMenu = () => {
           Learn
           <FontAwesomeIcon
             icon={faAngleDown}
-            className='absolute right-0 top-1/2 -translate-y-1/2 text-realt-blue-700'
+            className='hidden xl:block absolute -right-1 top-1/2 -translate-y-1/2 text-realt-blue-700'
           />
           {activeMenuElement === 'learn' && (
             <>
