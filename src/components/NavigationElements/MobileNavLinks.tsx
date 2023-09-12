@@ -20,7 +20,7 @@ const MobileNavLinks = () => {
   const [isTeamOpen, setIsTeamOpen] = useState(false)
 
   return (
-    <div className='flex flex-col h-full gap-4 p-6 bg-realt-blue-750/[85] md:p-10'>
+    <div className='flex flex-col overflow-auto h-full gap-4 p-6 bg-realt-blue-750/[85] md:p-10'>
       <Link href='/' className='flex gap-4 items-center p-2'>
         <FontAwesomeIcon icon={faStore} className='w-[25px] h-[25px]' />
         <p>Marketplace</p>

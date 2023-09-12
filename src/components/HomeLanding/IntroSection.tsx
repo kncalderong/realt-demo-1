@@ -64,10 +64,10 @@ const IntroSection = () => {
 
   return (
     <section
-      className='intro w-full max-w-[1024px] gap-6 pt-12 min-h-[calc(100vh-89px)] flex flex-col justify-center overflow-hidden md:pt-0 md:min-h-[calc(100vh-105px)] md:w-3/4 lg:w-full lg:items-center lg:flex-row lg:min-h-[calc(100vh-100px)] lg:gap-12 lg:pt-12'
+      className='intro w-full max-w-[1024px] gap-6 pt-4 min-h-[calc(100vh-89px)] flex flex-col justify-center overflow-hidden md:pt-0 md:min-h-[calc(100vh-105px)] md:w-3/4 lg:w-full lg:items-center lg:flex-row lg:min-h-[calc(100vh-100px)] lg:gap-12 lg:pt-12'
       ref={landingBlock1Ref}
     >
-      <div className='relative w-full h-1/2 lg:h-full lg:w-1/2'>
+      <div className='relative w-full h-1/2 min-h-[430px] lg:h-full lg:w-1/2'>
         <div className='intro_img--1 absolute overflow-hidden w-1/2 h-[250px] rounded-[2rem]  max-w-[390px]  left-[5%] top-[15%] z-[2] md:h-[360px] lg:h-[440px]  lg:w-3/5 lg:top-[25%] lg:left-0'>
           <Image
             src={
