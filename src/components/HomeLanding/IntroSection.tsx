@@ -2,12 +2,9 @@
 
 import Image from 'next/image'
 import React, { useRef, useLayoutEffect, useState } from 'react'
-import heroBlockStacking from '../../../public/hero-block-stacking.png'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/all'
 import useGsapContext from '@/hooks/gsapContexts'
-
-gsap.registerPlugin(ScrollTrigger)
+import FancyButton3d from '@/components/FancyButton3d'
 
 const IntroSection = () => {
   const landingBlock1Ref = useRef<HTMLDivElement>(null)
@@ -67,7 +64,7 @@ const IntroSection = () => {
       className='intro w-full max-w-[1024px] gap-6 pt-4 min-h-[calc(100vh-89px)] flex flex-col justify-center overflow-hidden md:pt-0 md:min-h-[calc(100vh-105px)] md:w-3/4 lg:w-full lg:items-center lg:flex-row lg:min-h-[calc(100vh-100px)] lg:gap-12 lg:pt-12'
       ref={landingBlock1Ref}
     >
-      <div className='relative w-full h-1/2 min-h-[430px] lg:h-full lg:w-1/2'>
+      <div className='relative w-full h-auto min-h-[360px] md:min-h-[600px] lg:h-full lg:w-1/2'>
         <div className='intro_img--1 absolute overflow-hidden w-1/2 h-[250px] rounded-[2rem]  max-w-[390px]  left-[5%] top-[15%] z-[2] md:h-[360px] lg:h-[440px]  lg:w-3/5 lg:top-[25%] lg:left-0'>
           <Image
             src={
@@ -90,46 +87,17 @@ const IntroSection = () => {
         </div>
       </div>
 
-      <div className='w-full h-1/2  flex flex-col gap-6 items-start md:justify-center lg:h-full lg:w-1/2'>
+      <div className='w-full h-1/2  flex flex-col gap-6 items-start pb-2 md:justify-center lg:h-full lg:w-1/2'>
         <h3 className='intro_title'>
-          Fractional and frictionless real estate investment
+          Fractional and frictionless real estate investing
         </h3>
-        <h5 className='text-realt-blue-700'>Reinvented property</h5>
+        <h5 className='text-realt-blue-700'>OWNERSHIP REINVENTED</h5>
         <p className='intro_txt'>
-          For the first time, investors around the world can buy into the US
-          real estate market through tokenized, fractional, fully compliant
+          For the first time, investors around the globe can buy into the US
+          real estate market through fully-compliant, fractional, tokenized
           ownership. Powered by blockchain.
         </p>
-        <figure
-          className='w-[150px] h-[50px]  cursor-pointer lg:self-end'
-          onMouseEnter={() => setIsButtonHover(true)}
-          onMouseLeave={() => setIsButtonHover(false)}
-        >
-          <div
-            className='h-full duration-300 group-hover/button:text-red'
-            style={
-              isButtonHover
-                ? {
-                    transformStyle: 'preserve-3d',
-                    transform: 'rotateX(-90deg)',
-                  }
-                : { transformStyle: 'preserve-3d' }
-            }
-          >
-            <span
-              className='grid place-items-center w-full h-full absolute border-[5px] border-realt-blue-550 uppercase text-center text-realt-blue-550 bg-white'
-              style={{ transform: 'translate3d(0, 0, 25px)' }}
-            >
-              Start
-            </span>
-            <span
-              className='grid place-items-center w-full h-full absolute border-[5px] border-realt-blue-550 uppercase text-center text-white bg-realt-blue-550 rotate-90'
-              style={{ transform: 'rotateX(90deg) translate3d(0, 0, 25px)' }}
-            >
-              Start
-            </span>
-          </div>
-        </figure>
+        <FancyButton3d href='/' text='Get Started' />
       </div>
     </section>
   )
