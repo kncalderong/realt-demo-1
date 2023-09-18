@@ -37,7 +37,7 @@ const Header = () => {
           <div className='flex justify-end pr-4 font-semibold text-[15px] grow xl:pr-16 '>
             <div className='grid items-center w-3/4 grid-cols-2 gap-2 justify-items-center'>
               <Link
-                href='/'
+                href='/marketplace'
                 className='w-full h-full grid place-items-center relative group/marketplace-link hover:text-realt-red'
               >
                 <div className='absolute w-0 h-[3px] bg-realt-red group-hover/marketplace-link:w-full left-0 bottom-0 transition-all duration-300'></div>
