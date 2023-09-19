@@ -9,6 +9,20 @@ export default function Home() {
         <SmoothScroll />
         <IntroSection />
         <DefiSection />
+        <IntroSection />
+        <DefiSection />
+        <IntroSection />
+        <DefiSection />
+        <IntroSection />
+        <DefiSection />
+        <IntroSection />
+        <DefiSection />
+        <IntroSection />
+        <DefiSection />
+        <IntroSection />
+        <DefiSection />
+        <IntroSection />
+        <DefiSection />
       </div>
     </main>
   )
