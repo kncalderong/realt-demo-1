@@ -11,8 +11,6 @@ const IntroSection = () => {
 
   const ctx = useGsapContext(landingBlock1Ref)
 
-  const [isButtonHover, setIsButtonHover] = useState(false)
-
   useLayoutEffect(() => {
     ctx.add(() => {
       // animate the intro elements into place
@@ -61,11 +59,11 @@ const IntroSection = () => {
 
   return (
     <section
-      className='intro w-full max-w-[1024px] gap-6 pt-4 min-h-[calc(100vh-89px)] flex flex-col justify-center overflow-hidden md:pt-0 md:min-h-[calc(100vh-105px)] md:w-3/4 lg:w-full lg:items-center lg:flex-row lg:min-h-[calc(100vh-100px)] lg:gap-12 lg:pt-12'
+      className='intro w-full max-w-[1024px] gap-6 pt-4 min-h-[calc(100vh-89px)] flex flex-col justify-center overflow-hidden md:pt-0 md:min-h-[calc(100vh-105px)] md:w-3/4 lg:w-full lg:items-center lg:flex-row lg:min-h-[calc(100vh-100px)] lg:gap-12 xl:pt-12'
       ref={landingBlock1Ref}
     >
       <div className='relative w-full h-auto min-h-[360px] md:min-h-[600px] lg:h-full lg:w-1/2'>
-        <div className='intro_img--1 absolute overflow-hidden w-1/2 h-[250px] rounded-[2rem]  max-w-[390px]  left-[5%] top-[15%] z-[2] md:h-[360px] lg:h-[440px]  lg:w-3/5 lg:top-[25%] lg:left-0'>
+        <div className='intro_img--1 absolute overflow-hidden w-1/2 h-[250px] rounded-[2rem]  max-w-[390px]  left-[5%] top-[15%] z-[2] md:h-[360px] xl:h-[440px]  lg:w-3/5 lg:top-[25%] lg:left-0'>
           <Image
             src={
               'https://img.freepik.com/free-photo/high-angle-woman-working-laptop_23-2150132277.jpg?w=740&t=st=1694526267~exp=1694526867~hmac=2e01c9cc7caf41d402162a6a39618ba7c51aebdfba79306cd86a6b16f2264be9'
@@ -76,7 +74,7 @@ const IntroSection = () => {
             className='object-cover'
           />
         </div>
-        <div className='intro_img--2 w-1/2 absolute overflow-hidden h-[250px] rounded-[2rem] max-w-[390px]  left-[45%] top-[30%] z-[1] md:h-[360px] lg:h-[440px] lg:w-3/5 lg:top-[10%] lg:left-[35%]'>
+        <div className='intro_img--2 w-1/2 absolute overflow-hidden h-[250px] rounded-[2rem] max-w-[390px]  left-[45%] top-[30%] z-[1] md:h-[360px] xl:h-[440px] lg:w-3/5 lg:top-[10%] lg:left-[35%]'>
           <Image
             src='https://images.unsplash.com/photo-1567016251318-c85cc6f139c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
             alt='hero Realt stacking'
