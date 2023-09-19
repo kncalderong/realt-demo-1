@@ -33,6 +33,34 @@ const DefiSection = () => {
           scrub: true,
         },
       })
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.card',
+          start: 'top center',
+        },
+      })
+
+      tl.from(
+        '.col-title-line',
+        {
+          y: 200,
+          duration: 2,
+          ease: 'power4',
+          stagger: 0.1,
+        },
+        0
+      ).from(
+        '.col-content-text',
+        {
+          x: 100,
+          y: 50,
+          opacity: 0,
+          duration: 2,
+          ease: 'power4',
+        },
+        0.4
+      )
     })
 
     return () => ctx.revert()
@@ -62,12 +90,12 @@ const DefiSection = () => {
         />
       </div>
       <div className='relative w-full h-auto flex flex-col gap-6 lg:w-1/2 lg:justify-center'>
-        <h3>DeFi Integrated</h3>
-        <h5 className='text-realt-blue-550'>
+        <h3 className='col-title col-title-line'>DeFi Integrated</h3>
+        <h5 className='col-title col-title-line text-realt-blue-550'>
           Discover The Power Of RealT{' '}
-          <span className='text-realt-red'>RMM</span> Platform
+          <span className='text-realt-red col-title-line'>RMM</span> Platform
         </h5>
-        <p>
+        <p className='col-content-text'>
           Leverage your assets like never before with the power of Decentralized
           Finance on the blockchain.
         </p>
