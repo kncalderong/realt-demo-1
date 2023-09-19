@@ -70,6 +70,7 @@ const Sidebar = () => {
                     alt='user-photo'
                     fill
                     className='object-cover'
+                    sizes='25vw'
                   />
                 </div>
                 <div className='grow'>
